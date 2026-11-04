@@ -10,6 +10,7 @@ metadata-files:
 lang: ru
 
 website:
+  favicon: images/favicon.png
   title: "Сбор данных для гуманитарных исследований"
   site-url: https://minidegree-dh.github.io/miniDH-scraping/
   repo-url: https://github.com/Minidegree-DH/miniDH-scraping
@@ -23,8 +24,11 @@ website:
         text: Проект
       - href: resources.qmd
         text: Ресурсы
-      - href: setup.qmd
-        text: Установка
+    right:
+      - text: Ведомость
+        href: https://docs.google.com/spreadsheets/d/1r0UY9qvdqbFJl7yIVJxvzA6fDhArwUjSczj9emu6JRc/edit?gid=0#gid=0
+      - icon: github
+        href: https://github.com/always1ready/dh-tools
 
 format:
   html:
