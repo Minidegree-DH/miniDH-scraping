@@ -36,6 +36,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./images/favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
@@ -46,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2f26042ee04390a409193c36bb3e8631.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-48eea8e06ff06eb442a2daacfce5ac08.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -111,12 +112,17 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./resources.html"> 
 <span class="menu-text">Ресурсы</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./setup.html"> 
-<span class="menu-text">Установка</span></a>
-  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://docs.google.com/spreadsheets/d/1r0UY9qvdqbFJl7yIVJxvzA6fDhArwUjSczj9emu6JRc/edit?gid=0#gid=0"> 
+<span class="menu-text">Ведомость</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/always1ready/dh-tools"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-dh" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Минидигри DH</span>
@@ -211,66 +217,14 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="формат">Формат</h2>
 <p>Семь занятий по субботам, на каждом — теория и практика в Jupyter-тетрадках. Студенты разделены на две группы; время и аудитории групп — в <a href="./schedule.html">расписании</a>.</p>
 <p>Домашние задания сдаются коммитом в собственный репозиторий на GitHub: его заводим на первом занятии. Курс завершается защитой командного проекта.</p>
-<p>Работаем локально в VS Code. Как всё установить — на странице <a href="./setup.html">Установка</a>.</p>
+<p>Работаем локально в VS Code. Как всё установить — на странице <a href="setup.qmd">Установка</a>.</p>
 </section>
 <section id="оценивание" class="level2">
 <h2 class="anchored" data-anchor-id="оценивание">Оценивание</h2>
 <p><strong>Итог = 0,21 × Семинарская активность + 0,29 × Домашние задания + 0,5 × Проект</strong></p>
-<p>Оценки за активность и за домашние задания — среднее арифметическое всех оценок по этому элементу. Округление арифметическое.</p>
+<p>Оценки за активность и за домашние задания — среднее арифметическое всех оценок по этому элементу.</p>
 <p><strong>Семинарская активность.</strong> На каждом занятии — от 0 до 1 балла в зависимости от вовлечённости в работу, правильных ответов и решённых заданий.</p>
-<p><strong>Домашние задания.</strong> Три задания (после занятий 2, 4 и 6). Оценка зависит от числа ошибок:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Оценка</th>
-<th>Результат</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>9–10</td>
-<td>результат превосходит ожидания, на защите объяснена каждая строка кода</td>
-</tr>
-<tr class="even">
-<td>8</td>
-<td>задание выполнено без ошибок</td>
-</tr>
-<tr class="odd">
-<td>7</td>
-<td>1 незначительная ошибка</td>
-</tr>
-<tr class="even">
-<td>6</td>
-<td>2 незначительные или 1 значительная ошибка</td>
-</tr>
-<tr class="odd">
-<td>5</td>
-<td>2 значительные ошибки</td>
-</tr>
-<tr class="even">
-<td>4</td>
-<td>до 3 значительных ошибок, код работает</td>
-</tr>
-<tr class="odd">
-<td>3</td>
-<td>более 3 значительных ошибок</td>
-</tr>
-<tr class="even">
-<td>2</td>
-<td>код не решает задачу</td>
-</tr>
-<tr class="odd">
-<td>1</td>
-<td>код не работает</td>
-</tr>
-</tbody>
-</table>
 <p><strong>Проект</strong> — командный: сбор и предобработка данных для гуманитарного исследования по техническому заданию. Подробнее — на странице <a href="./project.html">Проект</a>.</p>
-<!-- TODO: правила пересдачи в ПУДе противоречивы (ДЗ: «невозможна» и «только по уважительной причине»; проект: «невозможна» и «по обычным правилам экзамена»). Написать здесь после уточнения ПУДа. Также решить, есть ли штраф за опоздание. -->
 <p>Оценки — в <a href="https://docs.yandex.ru/edit/disk/disk%2F2026%20Mini-DH-scraping%20Grades.xlsx?source=docs">ведомости</a>.</p>
 </section>
 <section id="вопросы" class="level2">
