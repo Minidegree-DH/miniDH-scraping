@@ -1,0 +1,70 @@
+---
+title: "Установка"
+---
+
+На занятиях работаем локально в VS Code. Установите всё до первого занятия: в аудитории на это не будет времени.
+
+## 1. Python
+
+Нужен Python 3.11 или новее. Проверить версию в терминале:
+
+```bash
+python --version
+```
+
+Если Python нет или он старше, скачайте установщик с [python.org](https://www.python.org/downloads/). На Windows при установке отметьте **Add python.exe to PATH**.
+
+## 2. Git и GitHub
+
+Домашние задания сдаются коммитом на GitHub.
+
+1. Установите [Git](https://git-scm.com/downloads).
+2. Если у вас ещё нет аккаунта на [GitHub](https://github.com/), заведите его.
+3. Представьтесь Git (один раз):
+
+```bash
+git config --global user.name "Имя Фамилия"
+git config --global user.email "you@example.com"
+```
+
+## 3. VS Code
+
+1. Установите [VS Code](https://code.visualstudio.com/).
+2. Во вкладке Extensions установите расширения **Python** и **Jupyter** (оба от Microsoft).
+
+## 4. Материалы курса и библиотеки
+
+Скачайте репозиторий курса и создайте в нём виртуальное окружение:
+
+```bash
+git clone https://github.com/Minidegree-DH/miniDH-scraping.git
+cd miniDH-scraping
+python -m venv .venv
+```
+
+Активируйте окружение:
+
+```bash
+# Windows
+.venv\Scripts\activate
+# macOS и Linux
+source .venv/bin/activate
+```
+
+Установите библиотеки:
+
+```bash
+pip install -r requirements.txt
+```
+
+Откройте папку `miniDH-scraping` в VS Code, откройте любую тетрадку `.ipynb` и в правом верхнем углу выберите ядро **.venv**.
+
+Перед каждым занятием обновляйте материалы командой `git pull` в папке репозитория.
+
+## 5. Браузер для Selenium (к занятию 6)
+
+Нужен установленный Google Chrome или Firefox. Драйвер браузера отдельно скачивать не нужно: Selenium 4.6 и новее находит и загружает его сам.
+
+## Если что-то не получилось
+
+Напишите преподавателю до занятия и приложите скриншот ошибки.
