@@ -1,6 +1,6 @@
-# miniDH-scraping
+# Web Scraping and APIs for Humanities Research
 
-**Web Scraping and APIs for Humanities Research** — course materials.
+*Сourse materials*
 
 The second course of the [Minidegree Digital Humanities](https://github.com/Minidegree-DH) programme, Faculty of Humanities, HSE University, 2026/27. Teaching language: Russian.
 
