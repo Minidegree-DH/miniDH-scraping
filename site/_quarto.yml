@@ -1,0 +1,37 @@
+project:
+  type: website
+  # Сборка идёт в site/_site, затем скрипт копирует её в ../docs
+  post-render: publish_to_docs.py
+
+# Общие для всех курсов минидигри меню и подвал
+metadata-files:
+  - _minidh.yml
+
+lang: ru
+
+website:
+  title: "Сбор данных для гуманитарных исследований"
+  site-url: https://minidegree-dh.github.io/miniDH-scraping/
+  repo-url: https://github.com/Minidegree-DH/miniDH-scraping
+  navbar:
+    left:
+      - href: index.qmd
+        text: О курсе
+      - href: schedule.qmd
+        text: Расписание
+      - href: project.qmd
+        text: Проект
+      - href: resources.qmd
+        text: Ресурсы
+      - href: setup.qmd
+        text: Установка
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+# Тетрадки при сборке сайта не выполняются
+execute:
+  enabled: false

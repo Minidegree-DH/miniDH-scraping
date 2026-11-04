@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Секреты: API-ключи и токены
+.env
+*.token
+
+# Quarto
+site/.quarto/
+site/_freeze/
+site/_site/
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+.vscode/

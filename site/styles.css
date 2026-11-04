@@ -1,0 +1,23 @@
+/* Карточка занятия в расписании */
+.session-card {
+  border: 1px solid #dee2e6;
+  border-left: 4px solid #2780e3;
+  border-radius: 6px;
+  padding: 0.75rem 1.25rem;
+  margin: 1.25rem 0;
+}
+
+.session-card h3 {
+  margin-top: 0.25rem;
+}
+
+/* Время и аудитории групп */
+.session-card table {
+  width: auto;
+  margin: 0.5rem 0;
+}
+
+.session-card td,
+.session-card th {
+  padding: 0.2rem 1rem 0.2rem 0;
+}

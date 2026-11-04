@@ -1,0 +1,37 @@
+---
+title: "Ресурсы"
+---
+
+## Учебные материалы
+
+| Материал | Что там |
+|---|---|
+| M. Walsh, [Introduction to Cultural Analytics & Python](https://melaniewalsh.github.io/Intro-Cultural-Analytics/), раздел Data Collection | API, веб-скрейпинг, правовые и этические вопросы — для гуманитариев без опыта программирования (англ.) |
+| [Web Scraping with Python](https://carpentry.library.ucsb.edu/web-scraping-python/) (Carpentries @ UCSB) | HTML в браузере, requests и BeautifulSoup, Selenium (англ.) |
+| B. Keegan, [Web Data Scraping](https://github.com/CU-ITSS/Web-Data-Scraping-S2021) (CU Boulder) | Курс в тетрадках: API Википедии, скрейпинг, этика (англ.) |
+| [Wikidata: SPARQL tutorial](https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial) и [интерактивный учебник WDQS](https://wdqs-tutorial.toolforge.org/) | SPARQL с нуля |
+| [SPARQLing Archaeology](https://n4o-rse.github.io/oer-001-sparqling-archaeology/) | От SPARQL-запроса к интерактивной карте (англ.) |
+| [Programming Historian](https://programminghistorian.org/) | Рецензируемые уроки по API, связанным данным и скрейпингу; проверяйте дату урока |
+| [Веб-скрейпинг для журналистов](https://te-st.org/reports/web-scraping-course/) (Теплица социальных технологий) | Примеры на русском: requests, BeautifulSoup, Selenium |
+| R. Mitchell, *Web Scraping with Python*, 3rd ed. (O'Reilly, 2024) | Основная книга курса |
+
+## Библиотеки Python
+
+| Библиотека | Для чего |
+|---|---|
+| [requests](https://requests.readthedocs.io/) | HTTP-запросы к сайтам и API |
+| [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) | Разбор HTML и XML |
+| [lxml](https://lxml.de/) | Быстрый парсер HTML и XML, используется Beautiful Soup |
+| [pandas](https://pandas.pydata.org/docs/) | Таблицы: чистка, объединение, сохранение в CSV |
+| [tqdm](https://tqdm.github.io/) | Индикатор прогресса для долгого сбора |
+| [Selenium](https://www.selenium.dev/documentation/webdriver/) | Управление браузером для динамических страниц |
+
+## Открытые API и данные
+
+| Ресурс | Что даёт |
+|---|---|
+| [MediaWiki API](https://www.mediawiki.org/wiki/API:Main_page) | Статьи, категории, правки Википедии; без ключа |
+| [Wikidata Query Service](https://query.wikidata.org/) | SPARQL-запросы к Wikidata; без ключа |
+| [Национальный корпус русского языка](https://ruscorpora.ru/) | Корпуса русского языка; есть API |
+| [Europeana APIs](https://pro.europeana.eu/page/apis) | Коллекции европейских музеев, архивов и библиотек; нужен бесплатный ключ |
+| [VK API](https://dev.vk.com/ru/reference) | Данные ВКонтакте; нужно приложение и токен |
