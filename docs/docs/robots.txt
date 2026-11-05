@@ -1,1 +1,0 @@
-Sitemap: https://minidegree-dh.github.io/miniDH-scraping/sitemap.xml
