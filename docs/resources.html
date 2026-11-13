@@ -175,7 +175,15 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#учебные-материалы" id="toc-учебные-материалы" class="nav-link active" data-scroll-target="#учебные-материалы">Учебные материалы</a></li>
   <li><a href="#чтение-по-dh" id="toc-чтение-по-dh" class="nav-link" data-scroll-target="#чтение-по-dh">Чтение по DH</a></li>
   <li><a href="#библиотеки-python" id="toc-библиотеки-python" class="nav-link" data-scroll-target="#библиотеки-python">Библиотеки Python</a></li>
-  <li><a href="#открытые-api-и-данные" id="toc-открытые-api-и-данные" class="nav-link" data-scroll-target="#открытые-api-и-данные">Открытые API и данные</a></li>
+  <li><a href="#каталог-гуманитарных-api" id="toc-каталог-гуманитарных-api" class="nav-link" data-scroll-target="#каталог-гуманитарных-api">Каталог гуманитарных API</a>
+  <ul class="collapse">
+  <li><a href="#энциклопедии-и-вики-проекты" id="toc-энциклопедии-и-вики-проекты" class="nav-link" data-scroll-target="#энциклопедии-и-вики-проекты">Энциклопедии и вики-проекты</a></li>
+  <li><a href="#библиотеки-и-каталоги" id="toc-библиотеки-и-каталоги" class="nav-link" data-scroll-target="#библиотеки-и-каталоги">Библиотеки и каталоги</a></li>
+  <li><a href="#музеи-и-собрания" id="toc-музеи-и-собрания" class="nav-link" data-scroll-target="#музеи-и-собрания">Музеи и собрания</a></li>
+  <li><a href="#архивы-газеты-национальные-агрегаторы" id="toc-архивы-газеты-национальные-агрегаторы" class="nav-link" data-scroll-target="#архивы-газеты-национальные-агрегаторы">Архивы, газеты, национальные агрегаторы</a></li>
+  <li><a href="#научные-публикации" id="toc-научные-публикации" class="nav-link" data-scroll-target="#научные-публикации">Научные публикации</a></li>
+  <li><a href="#тексты-язык-музыка-места" id="toc-тексты-язык-музыка-места" class="nav-link" data-scroll-target="#тексты-язык-музыка-места">Тексты, язык, музыка, места</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -312,73 +320,389 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </section>
-<section id="открытые-api-и-данные" class="level2">
-<h2 class="anchored" data-anchor-id="открытые-api-и-данные">Открытые API и данные</h2>
-<p>Доступность ресурсов из России меняется. Прежде чем выбрать API для задания или проекта, откройте адрес из его документации без VPN.</p>
+<section id="каталог-гуманитарных-api" class="level2">
+<h2 class="anchored" data-anchor-id="каталог-гуманитарных-api">Каталог гуманитарных API</h2>
+<p>Доступность ресурсов из России меняется. Перед выбором откройте адрес API из документации без VPN и отправьте пробный запрос. Отметка «проверено 13.11» означает, что 13.11.2026 пробный запрос с компьютера преподавателя получил ответ; это не гарантирует, что ресурс будет доступен и вам.</p>
+<p>Перед сбором обязательно прочитайте правила использования API: многие из них просят указывать User-Agent с контактом и ограничивают число запросов в секунду. Если источник предлагает готовые выгрузки, большие объёмы данных берут из них, а не через API.</p>
+<section id="энциклопедии-и-вики-проекты" class="level3">
+<h3 class="anchored" data-anchor-id="энциклопедии-и-вики-проекты">Энциклопедии и вики-проекты</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Ресурс</th>
-<th>Что даёт</th>
+<th>Данные</th>
+<th>Ключ и правила</th>
+<th>Пагинация</th>
+<th>Документация</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="https://www.mediawiki.org/wiki/API:Main_page">MediaWiki API</a></td>
-<td>Статьи, категории, правки Википедии; без ключа, но нужен заголовок User-Agent; <a href="https://www.mediawiki.org/wiki/Wikimedia_APIs/Rate_limits">лимиты запросов</a></td>
+<td>MediaWiki API: Википедия, Викитека, Викицитатник, Викисклад</td>
+<td>статьи, категории, правки, тексты, цитаты, медиафайлы</td>
+<td>нет; обязателен User-Agent; лимиты Wikimedia</td>
+<td>курсор <code>continue</code></td>
+<td><a href="https://www.mediawiki.org/wiki/API:Main_page">API:Main page</a></td>
 </tr>
 <tr class="even">
-<td><a href="https://query.wikidata.org/">Wikidata Query Service</a></td>
-<td>SPARQL-запросы к Wikidata; без ключа</td>
+<td>Wikimedia Pageviews API</td>
+<td>число просмотров статей по дням и месяцам</td>
+<td>нет; обязателен User-Agent</td>
+<td>нет: период задаётся датами в адресе</td>
+<td><a href="https://doc.wikimedia.org/generated-data-platform/aqs/analytics-api/">документация</a></td>
 </tr>
 <tr class="odd">
-<td>Open Library: <a href="https://openlibrary.org/developers/api">Developer Center</a>, <a href="https://openlibrary.org/dev/docs/api/search">Search API</a>, <a href="https://openlibrary.org/developers/dumps">выгрузки</a></td>
-<td>Открытый библиотечный каталог: книги, авторы, издания; без ключа, User-Agent с контактом даёт более высокий лимит; весь каталог — через ежемесячные выгрузки</td>
+<td>Wikidata API</td>
+<td>сущности Wikidata: люди, произведения, места</td>
+<td>нет; обязателен User-Agent</td>
+<td>курсор <code>continue</code></td>
+<td><a href="https://www.wikidata.org/wiki/Wikidata:Data_access">документация</a></td>
+</tr>
+</tbody>
+</table>
+<p>Wikidata подробно разбирается на занятии 5 (SPARQL); в домашнем задании 1 её можно использовать через обычный API.</p>
+</section>
+<section id="библиотеки-и-каталоги" class="level3">
+<h3 class="anchored" data-anchor-id="библиотеки-и-каталоги">Библиотеки и каталоги</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Ресурс</th>
+<th>Данные</th>
+<th>Ключ и правила</th>
+<th>Пагинация</th>
+<th>Документация</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Open Library Search API</td>
+<td>книги, авторы, издания</td>
+<td>нет; User-Agent с контактом даёт 3 запроса в секунду вместо 1</td>
+<td><code>offset</code>/<code>limit</code>, <code>page</code></td>
+<td><a href="https://openlibrary.org/dev/docs/api/search">Search API</a></td>
 </tr>
 <tr class="even">
-<td><a href="https://archive.org/advancedsearch.php">Internet Archive Advanced Search</a></td>
-<td>Оцифрованные книги, аудио, видео; без ключа</td>
+<td>Internet Archive Advanced Search</td>
+<td>оцифрованные книги, аудио, видео</td>
+<td>нет</td>
+<td><code>rows</code>, <code>page</code></td>
+<td><a href="https://archive.org/advancedsearch.php">Advanced Search</a></td>
 </tr>
 <tr class="odd">
-<td><a href="https://metmuseum.github.io/">The Met Collection API</a></td>
-<td>Коллекция Метрополитен-музея; без ключа</td>
+<td>Harvard LibraryCloud</td>
+<td>каталог библиотек Гарвардского университета (MODS, Dublin Core)</td>
+<td>нет</td>
+<td><code>start</code>, <code>limit</code>; не дальше 10 000 записей</td>
+<td><a href="https://library.harvard.edu/services-tools/harvard-library-apis-datasets">документация</a></td>
 </tr>
 <tr class="even">
-<td><a href="https://edan.si.edu/openaccess/apidocs/">Smithsonian Open Access</a></td>
-<td>Коллекции музеев Смитсоновского института; нужен бесплатный ключ api.data.gov</td>
+<td>Немецкая национальная библиотека (DNB), SRU</td>
+<td>каталог DNB</td>
+<td>нет</td>
+<td><code>startRecord</code>, <code>maximumRecords</code>; ответ в XML</td>
+<td><a href="https://www.dnb.de/EN/Professionell/Metadatendienste/Datenbezug/SRU/sru_node.html">документация</a></td>
 </tr>
 <tr class="odd">
-<td><a href="https://api.crossref.org/swagger-ui/index.html">Crossref REST API</a></td>
-<td>Метаданные научных публикаций; без ключа</td>
+<td>HathiTrust Bibliographic API</td>
+<td>сведения об оцифрованных томах HathiTrust</td>
+<td>нет</td>
+<td>нет: поиск только по идентификаторам (OCLC, ISBN и др.)</td>
+<td><a href="https://www.hathitrust.org/member-libraries/resources-for-librarians/data-resources/bibliographic-api/">документация</a></td>
 </tr>
 <tr class="even">
-<td><a href="https://gutendex.com/">Gutendex</a></td>
-<td>Книги Project Gutenberg в общественном достоянии; без ключа</td>
+<td>Национальный корпус русского языка</td>
+<td>корпуса русского языка</td>
+<td>нужен ключ</td>
+<td>см. документацию</td>
+<td><a href="https://ruscorpora.ru/">ruscorpora.ru</a></td>
 </tr>
+</tbody>
+</table>
+</section>
+<section id="музеи-и-собрания" class="level3">
+<h3 class="anchored" data-anchor-id="музеи-и-собрания">Музеи и собрания</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Ресурс</th>
+<th>Данные</th>
+<th>Ключ и правила</th>
+<th>Пагинация</th>
+<th>Документация</th>
+</tr>
+</thead>
+<tbody>
 <tr class="odd">
-<td><a href="https://docs.github.com/en/rest">GitHub REST API</a></td>
-<td>Репозитории, например DH-проекты; без токена 60 запросов в час</td>
+<td>The Met Collection API</td>
+<td>коллекция Метрополитен-музея</td>
+<td>нет</td>
+<td>поиск возвращает список идентификаторов, описание объекта — отдельным запросом</td>
+<td><a href="https://metmuseum.github.io/">документация</a></td>
 </tr>
 <tr class="even">
-<td><a href="https://data.mos.ru">Открытые данные Москвы</a></td>
-<td>Объекты культурного наследия, музеи, библиотеки; нужен ключ после регистрации</td>
+<td>Cleveland Museum of Art Open Access API</td>
+<td>коллекция Кливлендского музея искусств</td>
+<td>нет</td>
+<td><code>skip</code>, <code>limit</code></td>
+<td><a href="https://openaccess-api.clevelandart.org/">документация</a></td>
 </tr>
 <tr class="odd">
-<td><a href="https://ruscorpora.ru/">Национальный корпус русского языка</a></td>
-<td>Корпуса русского языка; есть API</td>
+<td>Victoria and Albert Museum (V&amp;A) API</td>
+<td>коллекции V&amp;A</td>
+<td>нет</td>
+<td><code>page</code>, <code>page_size</code></td>
+<td><a href="https://developers.vam.ac.uk/">документация</a></td>
 </tr>
 <tr class="even">
-<td><a href="https://pro.europeana.eu/page/apis">Europeana APIs</a></td>
-<td>Коллекции европейских музеев, архивов и библиотек; нужен бесплатный ключ; из России открывается не у всех</td>
+<td>Rijksmuseum Data Services</td>
+<td>коллекция Рейксмузеума в модели Linked Art</td>
+<td>нет</td>
+<td>ссылка на следующую страницу в ответе</td>
+<td><a href="https://data.rijksmuseum.nl/">документация</a></td>
 </tr>
 <tr class="odd">
-<td><a href="https://dev.vk.com/ru/reference">VK API</a></td>
-<td>Данные ВКонтакте; нужно приложение и токен; в заданиях — только по согласованию и без данных о пользователях</td>
+<td>Statens Museum for Kunst (SMK) API</td>
+<td>коллекция Национальной галереи Дании</td>
+<td>нет</td>
+<td><code>offset</code>, <code>rows</code></td>
+<td><a href="https://smk.dk/en/article/smk-api">документация</a></td>
+</tr>
+<tr class="even">
+<td>Science Museum Group Collection</td>
+<td>коллекции музеев науки Великобритании</td>
+<td>нет; JSON отдаётся при заголовке <code>Accept: application/json</code></td>
+<td><code>page[number]</code>, <code>page[size]</code></td>
+<td><a href="https://github.com/TheScienceMuseum/collectionsonline-api">документация</a></td>
+</tr>
+<tr class="odd">
+<td>Wellcome Collection Catalogue API</td>
+<td>книги, рукописи, изображения по истории медицины</td>
+<td>нет</td>
+<td><code>page</code>, <code>pageSize</code></td>
+<td><a href="https://developers.wellcomecollection.org/">документация</a></td>
+</tr>
+<tr class="even">
+<td>Smithsonian Open Access</td>
+<td>коллекции музеев Смитсоновского института</td>
+<td>нужен бесплатный ключ api.data.gov; <code>DEMO_KEY</code> — только для проб (30 запросов в час с одного IP)</td>
+<td><code>start</code>, <code>rows</code></td>
+<td><a href="https://edan.si.edu/openaccess/apidocs/">документация</a></td>
+</tr>
+<tr class="odd">
+<td>Harvard Art Museums API</td>
+<td>коллекции художественных музеев Гарварда</td>
+<td>нужен ключ</td>
+<td><code>page</code>, <code>size</code></td>
+<td><a href="https://github.com/harvardartmuseums/api-docs">документация</a></td>
+</tr>
+<tr class="even">
+<td>Открытые данные Министерства культуры РФ</td>
+<td>наборы данных Минкультуры: музейные предметы, объекты культурного наследия, учреждения культуры и др.; состав наборов уточните в документации</td>
+<td>нужен бесплатный ключ, передаётся в заголовке <code>X-API-KEY</code></td>
+<td>см. документацию</td>
+<td><a href="https://opendata.mkrf.ru/">opendata.mkrf.ru</a></td>
+</tr>
+<tr class="odd">
+<td>Открытые данные Москвы</td>
+<td>объекты культурного наследия, музеи, библиотеки</td>
+<td>нужен ключ после регистрации</td>
+<td><code>$top</code>, <code>$skip</code></td>
+<td><a href="https://data.mos.ru">data.mos.ru</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="архивы-газеты-национальные-агрегаторы" class="level3">
+<h3 class="anchored" data-anchor-id="архивы-газеты-национальные-агрегаторы">Архивы, газеты, национальные агрегаторы</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Ресурс</th>
+<th>Данные</th>
+<th>Ключ и правила</th>
+<th>Пагинация</th>
+<th>Документация</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>The National Archives (Великобритания), Discovery API</td>
+<td>описания документов Национального архива и других архивов Великобритании</td>
+<td>нет</td>
+<td>см. документацию</td>
+<td><a href="https://discovery.nationalarchives.gov.uk/API/sandbox/index">документация</a></td>
+</tr>
+<tr class="even">
+<td>DigitalNZ</td>
+<td>газеты (Papers Past), фотографии, документы из учреждений Новой Зеландии</td>
+<td>для открытых материалов не нужен; при регулярном использовании рекомендуется бесплатный ключ (заголовок <code>Authentication-Token</code>)</td>
+<td><code>page</code>, <code>per_page</code></td>
+<td><a href="https://digitalnz.org/developers/api-docs-v3">документация</a></td>
+</tr>
+<tr class="odd">
+<td>Trove (Национальная библиотека Австралии)</td>
+<td>книги, газеты, фотографии, архивы Австралии</td>
+<td>нужен ключ</td>
+<td>курсор <code>s</code></td>
+<td><a href="https://trove.nla.gov.au/about/create-something/using-api">документация</a></td>
+</tr>
+<tr class="even">
+<td>DPLA (Цифровая публичная библиотека Америки)</td>
+<td>собрания библиотек, архивов и музеев США</td>
+<td>нужен ключ, выдаётся по электронной почте</td>
+<td><code>page</code>, <code>page_size</code></td>
+<td><a href="https://pro.dp.la/developers/api-codex">документация</a></td>
+</tr>
+<tr class="odd">
+<td>Deutsche Digitale Bibliothek</td>
+<td>собрания учреждений культуры Германии</td>
+<td>нужен ключ</td>
+<td>см. документацию</td>
+<td><a href="https://api.deutsche-digitale-bibliothek.de/">документация</a></td>
+</tr>
+<tr class="even">
+<td>Europeana</td>
+<td>собрания европейских музеев, архивов, библиотек</td>
+<td>нужен бесплатный ключ</td>
+<td><code>start</code>/<code>rows</code>; курсор</td>
+<td><a href="https://pro.europeana.eu/page/apis">документация</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="научные-публикации" class="level3">
+<h3 class="anchored" data-anchor-id="научные-публикации">Научные публикации</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Ресурс</th>
+<th>Данные</th>
+<th>Ключ и правила</th>
+<th>Пагинация</th>
+<th>Документация</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Crossref REST API</td>
+<td>метаданные научных публикаций</td>
+<td>нет; в параметре <code>mailto</code> или в User-Agent рекомендуется указать адрес</td>
+<td><code>rows</code>, <code>offset</code>; курсор</td>
+<td><a href="https://api.crossref.org/swagger-ui/index.html">документация</a></td>
+</tr>
+<tr class="even">
+<td>OpenAlex</td>
+<td>публикации, авторы, журналы, организации</td>
+<td>без ключа запросы делят общий дневной бюджет со всеми пользователями вашего IP; ключ бесплатный</td>
+<td><code>page</code>, <code>per-page</code>; курсор</td>
+<td><a href="https://docs.openalex.org/">документация</a></td>
+</tr>
+<tr class="odd">
+<td>DOAJ (Directory of Open Access Journals)</td>
+<td>журналы и статьи открытого доступа</td>
+<td>нет</td>
+<td><code>page</code>, <code>pageSize</code></td>
+<td><a href="https://doaj.org/api/docs">документация</a></td>
+</tr>
+<tr class="even">
+<td>Zenodo</td>
+<td>опубликованные наборы данных, статьи, программы</td>
+<td>нет</td>
+<td><code>page</code>, <code>size</code></td>
+<td><a href="https://developers.zenodo.org/">документация</a></td>
+</tr>
+<tr class="odd">
+<td>КиберЛенинка, OAI-PMH</td>
+<td>метаданные научных статей на русском языке</td>
+<td>нет</td>
+<td>курсор <code>resumptionToken</code>; ответ в XML</td>
+<td><a href="https://cyberleninka.ru/oai?verb=Identify">cyberleninka.ru/oai</a></td>
+</tr>
+<tr class="even">
+<td>arXiv API</td>
+<td>препринты</td>
+<td>нет; не чаще одного запроса в 3 секунды</td>
+<td><code>start</code>, <code>max_results</code>; ответ в XML (Atom)</td>
+<td><a href="https://info.arxiv.org/help/api/index.html">документация</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="тексты-язык-музыка-места" class="level3">
+<h3 class="anchored" data-anchor-id="тексты-язык-музыка-места">Тексты, язык, музыка, места</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Ресурс</th>
+<th>Данные</th>
+<th>Ключ и правила</th>
+<th>Пагинация</th>
+<th>Документация</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>PoetryDB</td>
+<td>англоязычная поэзия: авторы, названия, тексты</td>
+<td>нет</td>
+<td>нет</td>
+<td><a href="https://github.com/thundercomb/poetrydb">документация</a></td>
+</tr>
+<tr class="even">
+<td>Bible API</td>
+<td>тексты Библии в нескольких переводах</td>
+<td>нет</td>
+<td>нет: запрос по ссылке на стих</td>
+<td><a href="https://bible-api.com/">bible-api.com</a></td>
+</tr>
+<tr class="odd">
+<td>Datamuse</td>
+<td>слова: синонимы, рифмы, ассоциации (английский язык)</td>
+<td>нет</td>
+<td>параметр <code>max</code></td>
+<td><a href="https://www.datamuse.com/api/">документация</a></td>
+</tr>
+<tr class="even">
+<td>Free Dictionary API</td>
+<td>словарные статьи английского языка</td>
+<td>нет</td>
+<td>нет</td>
+<td><a href="https://dictionaryapi.dev/">dictionaryapi.dev</a></td>
+</tr>
+<tr class="odd">
+<td>MusicBrainz</td>
+<td>музыканты, произведения, записи, релизы</td>
+<td>нет; обязателен User-Agent с контактом; не чаще одного запроса в секунду</td>
+<td><code>limit</code>, <code>offset</code></td>
+<td><a href="https://musicbrainz.org/doc/MusicBrainz_API">документация</a></td>
+</tr>
+<tr class="even">
+<td>Pleiades</td>
+<td>места античного мира</td>
+<td>нет; для больших объёмов есть выгрузки</td>
+<td>нет: запрос по идентификатору места</td>
+<td><a href="https://pleiades.stoa.org/help/api">документация</a></td>
+</tr>
+<tr class="odd">
+<td>Nominatim (OpenStreetMap)</td>
+<td>геокодирование: адреса и названия мест → координаты</td>
+<td>нет; обязателен User-Agent; не чаще одного запроса в секунду; массовое геокодирование запрещено</td>
+<td><code>limit</code></td>
+<td><a href="https://nominatim.org/release-docs/latest/api/Overview/">документация</a></td>
+</tr>
+<tr class="even">
+<td>GitHub REST API</td>
+<td>репозитории, например DH-проекты</td>
+<td>необязателен: без токена 60 запросов в час, с токеном 5000</td>
+<td>заголовок <code>Link</code></td>
+<td><a href="https://docs.github.com/en/rest">документация</a></td>
 </tr>
 </tbody>
 </table>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
